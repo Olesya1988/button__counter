@@ -1,0 +1,59 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../../../views/fonts/Roboto/static/Roboto-Regular.ttf");
+}
+
+$primary-bgcolor: #ffffff1f;
+$secondary-bgcolor: #8366561f;
+
+$primary-color: #ffffff;
+$secondary-color: #2e2f33;
+
+// mixin общих стилей
+@mixin common {
+  font-family: Roboto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 0.86em;
+}
+
+// mixin цвета
+@mixin color($bgcolor, $color) {
+  background-color: $bgcolor;
+  color: $color;
+}
+
+// mixin размера
+@mixin size($mwidth) {
+  border-radius: $mwidth;
+  width: $mwidth;
+  height: $mwidth;
+}
+
+.primary {
+  @include common();
+  @include color($primary-bgcolor, $primary-color);
+}
+
+.secondary {
+  @include common();
+  @include color($secondary-bgcolor, $secondary-color);
+}
+
+// размер 28
+.size1 {
+  @include size(16px);
+}
+
+// размер 36
+.size2 {
+  @include size(20px);
+}
+
+// размер 56
+.size3 {
+  @include size(24px);
+}

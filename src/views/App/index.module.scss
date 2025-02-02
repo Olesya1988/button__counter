@@ -1,0 +1,27 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/Roboto/static/Roboto_Condensed-Regular.ttf");
+}
+
+.title {
+  font-family: Roboto;
+  font-size: 40px;
+  color: #ff7700;
+
+  padding-bottom: 20px;
+}
+
+.img {
+  width: 589px;
+  height: 633px;
+
+  object-fit: cover;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+
+  padding-top: 20px;
+}

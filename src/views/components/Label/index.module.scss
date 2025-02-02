@@ -1,0 +1,32 @@
+@font-face {
+  font-family: Roboto;
+  src: url("../../../views/fonts/Roboto/static/Roboto-Regular.ttf");
+}
+
+$primary-color: #ffffff;
+$secondary-color: #2e2f33;
+
+// mixin общих стилей
+@mixin common {
+  font-size: 1em;
+  font-family: Roboto;
+
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+// mixin цвета
+@mixin color($color) {
+  color: $color;
+}
+
+.primary {
+  @include common();
+  @include color($primary-color);
+}
+
+.secondary {
+  @include common();
+  @include color($secondary-color);
+}
