@@ -12,7 +12,7 @@
 }
 
 .model {
-  animation: fade 3s ease forwards;
+  animation: fade 5s ease forwards;
 
   height: 50px;
   color: #ff7700;
@@ -24,8 +24,9 @@
   padding: 10px;
 
   border: 2px solid #ff7700;
+  background-color: #ffffff;
   border-radius: 10px;
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,6 +52,7 @@
     opacity: 1;
     visibility: visible;
   }
+  
   to {
     opacity: 0;
     visibility: hidden;
