@@ -78,3 +78,12 @@ button:focus {
 button:hover {
   opacity: 0.88;
 }
+
+button:disabled {
+  opacity: 0.36;
+  cursor: no-drop;
+}
+
+
+
+

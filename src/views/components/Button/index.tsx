@@ -9,8 +9,21 @@ export const Button: React.FC = ({ item }) => {
 
   const [increment] = useStore((state) => [state.increment]);
 
+  const addDisabled = () => {
+    const buttons = Array.from(document.querySelectorAll("button"));
+    buttons.forEach((el) => {
+      el.setAttribute("disabled", "");
+    });
+  }; 
+
   return (
-    <button className={styles.size2} onClick={() => increment(id)}>
+    <button
+      className={styles.size2} 
+      onClick={() => {
+        increment(id);
+        addDisabled();
+      }}
+    >
       {loading ? (
         <img className={styles.loading2} src="./rolling.svg" alt="loading" />
       ) : (

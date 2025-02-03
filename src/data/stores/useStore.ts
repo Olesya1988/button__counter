@@ -67,16 +67,20 @@ export const useStore = create<Store>(
   localStorageUpdate(
     devtools((set, get) => ({
     items: getCurrentState(), // массив элементов
+    modal: false,
     increment: (id: number) => {
       // увеличение счётчика
-      const { items } = get();
+      const { items } = get();      
       // запуска лоадинга
       set({
         items: items.map((item) => ({
           ...item,
           loading: item.id === id ? true : false,
         })),
-      });
+      });  
+      set({
+        modal: true
+      });     
       // увеличение счётчика с задержкой 0,5ms + стоп лоадинга
       setTimeout(() => {
         set({
@@ -88,6 +92,7 @@ export const useStore = create<Store>(
         });
       }, 500);
     },
+    
     }))
   )
 );
